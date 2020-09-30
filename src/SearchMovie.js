@@ -6,7 +6,7 @@ import React, {useState} from "react";
 import MovieCard from './MovieCard.js'
 
 
-export default function SearchMovies(){ 
+function SearchMovies(){ 
     //create states for input query, movies
     const [query, setQuery] = useState('');
     const [movies, setMovies] = useState([]);
@@ -14,7 +14,7 @@ export default function SearchMovies(){
     const searchMovies = async (e) => {
         e.preventDefault();
                 
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=990a0920f644482d0e4a0f0e7260196e&language=en-US&query=${query}&page=1&include_adult=false`;
+        const url = `themoviedb_api;
         
         try {
             const res = await fetch(url);
@@ -44,7 +44,7 @@ export default function SearchMovies(){
     )
 }
 
-
+export default SearchMovie;
 
 
 
